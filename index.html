@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com">
+              tailwind.config = {
+          content: ["./index.html",
+              "./src/**/*.{js,ts,jsx,tsx}"
+          ],
+          theme: {
+              extend: {},
+          },
+          plugins: [],
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer components {
+        .navbar-icon {
+          @apply w-6 h-auto mr-4;
+        }
+      }
+      @layer components {
+        .navbar-list {
+          @apply flex items-center p-3 text-xl ml-4 hover:scale-110 transition-all;
+        }
+      }
+      @layer components {
+        .main-button {
+          @apply bg-blue-500 mx-4 p-2 w-28 rounded-3xl text-white transition-all hover:bg-blue-700 hover:scale-110;
+        }
+      }
+      @layer components {
+        .card {
+          @apply p-6 rounded-xl drop-shadow-lg bg-white flex flex-col border-l-8 border-yellow-500;
+        }
+      }
+      @layer components {
+        .card-btns {
+          @apply self-end flex w-24 gap-2;
+        }
+      }
+    </style>
+    <title>Vite App</title>
+  </head>
+  <body
+    class="grid grid-rows-[1fr_1fr_1fr_9fr] grid-cols-[1fr_5fr] antialiased h-screen w-screen"
+  >
+    <div class="bg-blue-700 h-screen text-2xl font-bold text-white row-span-4">
+      <div class="flex items-center p-2">
+        <img src="icons/view-grid-plus.png" alt="" class="" />
+        <div class="m-4">Dashboard</div>
+      </div>
+      <ul class="pl-6 mt-6">
+        <li class="navbar-list">
+          <img src="icons/home.png" alt="" class="navbar-icon" /><a href=""
+            >Home</a
+          >
+        </li>
+        <li class="navbar-list">
+          <img
+            src="icons/card-account-details-outline.png"
+            alt=""
+            class="navbar-icon"
+          /><a href="">Profile</a>
+        </li>
+        <li class="navbar-list">
+          <img src="icons/message.png" alt="" class="navbar-icon" /><a href=""
+            >Messages</a
+          >
+        </li>
+        <li class="navbar-list">
+          <img src="icons/history.png" alt="" class="navbar-icon" /><a href=""
+            >History</a
+          >
+        </li>
+        <li class="navbar-list">
+          <img src="icons/file-multiple.png" alt="" class="navbar-icon" /><a
+            href=""
+            >Tasks</a
+          >
+        </li>
+        <li class="navbar-list mb-16">
+          <img src="icons/account-group.png" alt="" class="navbar-icon" /><a
+            href=""
+            >Communities</a
+          >
+        </li>
+        <li class="navbar-list">
+          <img src="icons/cog.png" alt="" class="navbar-icon" /><a href=""
+            >Settings</a
+          >
+        </li>
+        <li class="navbar-list">
+          <img src="icons/help-box.png" alt="" class="navbar-icon" /><a href=""
+            >Support</a
+          >
+        </li>
+        <li class="navbar-list">
+          <img src="icons/shield-check.png" alt="" class="navbar-icon" /><a
+            href=""
+            >Privacy</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="flex h-16 w-full items-center place-content-around">
+      <a href=""><img src="icons/magnify.png" alt="" class="w-8 h-auto" /></a>
+      <input
+        type="search"
+        name=""
+        id=""
+        placeholder="Search"
+        class="bg-gray-300 rounded-xl w-1/2 px-2 h-7"
+      />
+      <a href=""
+        ><img src="icons/bell-outline.png" alt="" class="w-8 h-auto"
+      /></a>
+      <div class="bg-black rounded-full w-10 h-10"></div>
+      <div class="font-medium">Saleh Alakhras</div>
+    </div>
+    <div
+      class="flex place-content-between px-4 font-medium items-center shadow-lg border-b border-gray-300 pb-4 z-0 relative"
+    >
+      <div class="flex">
+        <div class="h-16 w-16 rounded-full bg-black mx-4"></div>
+        <div class="flex flex-col">
+          <div class="text-sm">Hi There,</div>
+          <div class="text-xl">Saleh Alakhras (@salehlalakhras)</div>
+        </div>
+      </div>
+      <div>
+        <button class="main-button">New</button>
+        <button class="main-button">Upload</button>
+        <button class="main-button">Share</button>
+      </div>
+    </div>
+    <div
+      class="flex flex-row justify-between font-medium text-xl p-4 bg-gray-200"
+    >
+      <div class="self-end">Your Projects</div>
+      <div class="self-end">Announcements</div>
+    </div>
+    <div class="grid grid-cols-[3fr_1fr] bg-gray-200">
+      <div class="grid grid-cols-2 grid-rows-3 px-4 gap-7 mb-10">
+        <div class="card">
+          <h3 class="font-medium text-xl">Title</h3>
+          <p class="text-sm text-gray-700 h-full">Paragraph</p>
+          <div class="card-btns">
+            <a href=""><img src="icons/star-plus-outline(1).png" alt="" /></a
+            ><a href=""><img src="icons/eye-plus-outline.png" alt="" /></a
+            ><a href=""><img src="icons/share-outline.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="font-medium text-xl">Title</h3>
+          <p class="text-sm text-gray-700 h-full">Paragraph</p>
+          <div class="card-btns">
+            <a href=""><img src="icons/star-plus-outline(1).png" alt="" /></a
+            ><a href=""><img src="icons/eye-plus-outline.png" alt="" /></a
+            ><a href=""><img src="icons/share-outline.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="font-medium text-xl">Title</h3>
+          <p class="text-sm text-gray-700 h-full">Paragraph</p>
+          <div class="card-btns">
+            <a href=""><img src="icons/star-plus-outline(1).png" alt="" /></a
+            ><a href=""><img src="icons/eye-plus-outline.png" alt="" /></a
+            ><a href=""><img src="icons/share-outline.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="font-medium text-xl">Title</h3>
+          <p class="text-sm text-gray-700 h-full">Paragraph</p>
+          <div class="card-btns">
+            <a href=""><img src="icons/star-plus-outline(1).png" alt="" /></a
+            ><a href=""><img src="icons/eye-plus-outline.png" alt="" /></a
+            ><a href=""><img src="icons/share-outline.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="font-medium text-xl">Title</h3>
+          <p class="text-sm text-gray-700 h-full">Paragraph</p>
+          <div class="card-btns">
+            <a href=""><img src="icons/star-plus-outline(1).png" alt="" /></a
+            ><a href=""><img src="icons/eye-plus-outline.png" alt="" /></a
+            ><a href=""><img src="icons/share-outline.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="font-medium text-xl">Title</h3>
+          <p class="text-sm text-gray-700 h-full">Paragraph</p>
+          <div class="card-btns">
+            <a href=""><img src="icons/star-plus-outline(1).png" alt="" /></a
+            ><a href=""><img src="icons/eye-plus-outline.png" alt="" /></a
+            ><a href=""><img src="icons/share-outline.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-rows-[3fr_1fr_3fr]">
+        <div>
+          <div >
+            <h3>Title</h3>
+            <p>Paragragh</p>
+          </div>
+          <div>
+            <h3>Title</h3>
+            <p>Paragragh</p>
+          </div>
+          <div>
+            <h3>Title</h3>
+            <p>Paragragh</p>
+          </div>
+        </div>
+        <div>Trending</div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
